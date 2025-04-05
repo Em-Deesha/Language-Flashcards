@@ -21,9 +21,9 @@ An interactive web app to help you learn basic words and phrases in **English**,
 ## 💻 How to Use
 
 1. **Clone the repo**
-   ```bash
+
 https://github.com/Em-Deesha/Language-Flashcards.git
-```
+
 2. **Open the project folder**
 3. **Double-click** on `index.html` or open it in a browser
 
