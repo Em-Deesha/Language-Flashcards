@@ -1,9 +1,11 @@
+/* Reset default margin, padding and use border-box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling: center everything vertically and horizontally */
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -15,6 +17,7 @@ body {
     padding: 20px;
 }
 
+/* Page header styling */
 header {
     margin-bottom: 30px;
     font-size: 2.5em;
@@ -24,6 +27,7 @@ header {
     text-transform: uppercase;
 }
 
+/* Top control panel (dropdown + buttons) */
 .control-panel {
     display: flex;
     justify-content: space-between;
@@ -37,6 +41,7 @@ header {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Language dropdown style */
 select {
     padding: 12px 20px;
     font-size: 1.2em;
@@ -45,8 +50,10 @@ select {
     background-color: #f0f0f0;
     color: #333;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* General button style */
 button {
     padding: 12px 20px;
     font-size: 1.2em;
@@ -58,23 +65,28 @@ button {
     transition: all 0.3s ease;
 }
 
+/* Button hover effect */
 button:hover {
     background-color: #45a049;
 }
 
+/* Reset button specific color */
 .reset-btn {
     background-color: #f44336;
 }
 
+/* Reset button hover effect */
 .reset-btn:hover {
     background-color: #d32f2f;
 }
 
+/* Arrange buttons in a row with space between */
 .buttons {
     display: flex;
     gap: 10px;
 }
 
+/* Flashcard container with 3D perspective */
 .flashcard-container {
     perspective: 1000px;
     display: flex;
@@ -82,13 +94,14 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/* Flashcard style (front/back text, flipping, etc.) */
 .flashcard {
-    width: 750px;
+    width: 700px;
     height: 350px;
     background-color: #fff;
     text-align: center;
     line-height: 350px;
-    font-size: 2.2em;
+    font-size: 3.2em;
     font-weight: bold;
     position: relative;
     transform-style: preserve-3d;
@@ -101,9 +114,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;  /* Prevent overflow */
+    overflow: hidden;  /* Prevents content from overflowing */
 }
 
+/* Front and back sides of the flashcard */
 .flashcard .front, .flashcard .back {
     position: absolute;
     top: 0;
@@ -116,21 +130,24 @@ button:hover {
     align-items: center;
     font-size: 2.2em;
     color: #333;
-    word-wrap: break-word;  /* Allow words to wrap onto the next line */
-    padding: 10px;  /* Add padding to prevent text from touching the edges */
-    text-align: center;  /* Ensure text is centered */
+    word-wrap: break-word;  /* Wrap long words */
+    padding: 10px;
+    text-align: center;
 }
 
+/* Back side of the flashcard */
 .flashcard .back {
     transform: rotateY(180deg);
     background-color: #007bff;
     color: white;
 }
 
+/* Flip effect applied via class */
 .flashcard.flipped {
     transform: rotateY(180deg);
 }
 
+/* Progress tracker styling */
 .progress-tracker {
     font-size: 1.2em;
     color: #333;
@@ -138,6 +155,7 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Make control panel vertical and card smaller on tablets */
 @media screen and (max-width: 600px) {
     .control-panel {
         flex-direction: column;
@@ -149,17 +167,37 @@ button:hover {
     }
 }
 
+/* Theme: English */
 .english-theme {
     background-color: #fff;
     color: #007bff;
 }
 
+/* Theme: Turkish */
 .turkish-theme {
     background-color: #e30a17;
     color: white;
 }
 
+/* Theme: German */
 .german-theme {
     background-color: #ffcc00;
     color: #000000;
+}
+
+/* Further adjust card and buttons on very small screens (mobiles) */
+@media screen and (max-width: 480px) {
+    .flashcard {
+        height: 200px;
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .control-panel {
+        padding: 10px;
+    }
 }
