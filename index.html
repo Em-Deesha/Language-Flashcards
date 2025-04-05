@@ -9,19 +9,33 @@
 </head>
 <body>
     <header>Language Flashcards</header>
+
+    <!-- Control panel for language selection and buttons -->
+
     <div class="control-panel">
+
+    <!-- Dropdown to select the language -->
+
         <select id="language-select">
             <option value="english">English</option>
             <option value="turkish">Turkish</option>
             <option value="german">German</option>
         </select>
+
+    <!-- Buttons to interact with the flashcards -->
+
         <div class="buttons">
             <button id="flip-btn">Flip</button>
             <button id="next-btn">Next</button>
             <button id="shuffle-btn">Shuffle</button>
         </div>
+    
+    <!-- Button to reset flashcards to the start -->
+
         <button id="reset-btn" class="reset-btn">Reset</button>
     </div>
+
+    <!-- Flashcard display area -->
 
     <div class="flashcard-container">
         <div id="flashcard" class="flashcard">
@@ -29,6 +43,9 @@
             <div class="back">Merhaba</div>
         </div>
     </div>
+        
+    <!-- Progress display (e.g., Card 1/10) -->
+
     <div class="progress-tracker" id="progress">Card 1/10</div>
     <script src="script.js"></script>
 </body>
